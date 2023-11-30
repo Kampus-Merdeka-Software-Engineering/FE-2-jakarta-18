@@ -64,6 +64,9 @@ body {
   margin-top: 1rem;
   margin-bottom: 1rem;
 }
+.body h2{
+  text-align: center;
+}
 
 .body .body-right{
   float: right;
@@ -159,11 +162,53 @@ body {
   font-size: 15px;
   font-family: 'Poppins';
 }
+.Product{
+  text-align: center;
+  
+}
 
 .flex{
+  
   display: flex;
   justify-content: space-between;
   padding: 1.2rem;
+}
+.Contact {
+  max-width: 400px; /* Atur lebar maksimum form */
+}
+
+.Contact form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.Contact label {
+  font-weight: bold;
+}
+
+.Contact input,
+.Contact textarea,
+.Contact button {
+  width: 100%;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+}
+
+.Contact button {
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.Contact button:hover {
+  background-color: #0056b3;
+}
+
+.Contact button:hover {
+  background-color: #0056b3;
 }
 
 /* countries */
