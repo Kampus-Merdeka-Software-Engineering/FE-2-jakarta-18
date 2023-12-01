@@ -131,7 +131,7 @@ body {
 }
 
 .header-image {
-  background-image: url("./assets/background-donut2.jpg");
+  background-image: url("../assets/background-donut2.jpg");
   top: 100%;
   background-position: center;
   color: black;
@@ -235,20 +235,20 @@ body {
   text-align: center;
 }
 .saudi-arabia{
-  background-image: url("./assets/countries/saudi-arabia.jpg");
+  background-image: url("../assets/countries/saudi-arabia.jpg");
 }
 .hongkong{
-  background-image: url("./assets/countries/hongkong.jpg");
+  background-image: url("../assets/countries/hongkong.jpg");
 }
 .indonesia{
-  background-image: url("./assets/countries/indonesia.jpg");
+  background-image: url("../assets/countries/indonesia.jpg");
 }
 .malaysia{
-  background-image: url("./assets/countries/malaysia.jpg");
+  background-image: url("../assets/countries/malaysia.jpg");
 }
 .singapore{
-  background-image: url("./assets/countries/singapore.jpg");
+  background-image: url("../assets/countries/singapore.jpg");
 }
 .philippines{
-  background-image: url("./assets/countries/philippines.jpg");
+  background-image: url("../assets/countries/philippines.jpg");
 }
