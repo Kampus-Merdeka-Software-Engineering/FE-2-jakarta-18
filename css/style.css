@@ -173,6 +173,11 @@ body {
   justify-content: space-between;
   padding: 1.2rem;
 }
+.Contact-wrapper {
+  display: flex;
+  justify-content: space-between; /* Menjaga jarak antar elemen */
+  align-items: center; /* Menyamakan tinggi elemen */
+}
 .Contact {
   max-width: 400px; /* Atur lebar maksimum form */
 }
@@ -209,6 +214,10 @@ body {
 
 .Contact button:hover {
   background-color: #0056b3;
+}
+.Contact-info{
+  display: inline-block; /* Meletakkan 'Contact-info' di tengah */
+  text-align: left; /* Untuk menengahkan isi dari 'Contact-info' */
 }
 
 /* countries */
