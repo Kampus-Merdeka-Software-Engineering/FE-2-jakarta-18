@@ -1,37 +1,21 @@
-// fetch('http://localhost:3000/products', {
-//     headers: {
-//         'Content-Type': 'application/json'
-//     },
-//     method: 'GET'
-// })
-// .then((result) => result.json())
-// .then((result) => {
-//     console.log(result)
-// })
-// .catch((err) => {
-//     console.log(err)
-// })
-
-// fetch('http://localhost:3000/products', {
-//     headers: {
-//         'Content-Type': 'application/json'
-//     },
-//     method: 'POST',
-//     body: JSON.stringify({
-//         name: "Donut",
-//         price: 5000,
-//         description: "text"
-//     })
-// })
-// .then((result) => result.json())
-// .then((result) => {
-//     console.log(result)
-// })
-// .catch((err) => {
-//     console.log(err)
-// })
-
-
+document.addEventListener("DOMContentLoaded", function() {
+    const header = document.querySelector('header');
+  
+    // Fungsi untuk menambahkan atau menghapus kelas 'scrolled' pada header saat di-scroll
+    function handleScroll() {
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    }
+  
+    // Tambahkan event listener pada window untuk mendeteksi scroll
+    window.addEventListener('scroll', handleScroll);
+  
+    // Panggil fungsi handleScroll untuk menentukan status awal
+    handleScroll();
+});
 
 document.getElementById('myForm').addEventListener('submit', function (event) {
     event.preventDefault(); // Prevent the default form submission

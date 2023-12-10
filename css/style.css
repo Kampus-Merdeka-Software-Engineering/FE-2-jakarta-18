@@ -9,17 +9,35 @@ body {
 
 /* header */
 header{
-  max-width: 72rem;
-  padding-top: 3rem;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.9);
+  transition: background-color 0.3s ease;
+  z-index: 1000;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
   align-items: center;
   display: flex;
-  margin-left: auto;
-  margin-right: auto;
   overflow: hidden;
 }
 
+.header-container {
+  max-width: 72rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  display: flex;
+}
+
+header .scrolled {
+  background-color: rgba(255, 255, 255, 1); /* Warna putih penuh tanpa transparansi */
+}
+
 @media only screen and (max-width: 768px) {
-  header{
+  header .header-container{
     overflow: hidden;
     display: flex;
     flex-direction: column;
@@ -27,12 +45,18 @@ header{
   }
 }
 
-header img{
+header .header-container img{
   height: 2.5rem;
   display: block;
   vertical-align: middle;
 }
-header .menu{
+header .header-container a{
+  align-self: center;
+}
+header .header-container .button{
+  align-self: center;
+}
+header .header-container .menu{
   flex: 1 1 0%;
 }
 header ul{
@@ -46,51 +70,35 @@ header ul li{
   list-style: none;
   padding-inline-start: 40px;
 }
+header ul li a{
+  text-decoration: none !important;
+  color: #000;
+}
 @media only screen and (max-width: 768px) {
-  header img{
+  header .header-container img{
     margin-bottom: 2rem;
   }
-  header ul{
+  header .header-container ul{
     padding-inline-start: 0px;
   }
-  header .menu{
+  header .header-container .menu{
     margin-bottom: 1rem;
   }
-}
-header .button-signin{
-  font-weight: 700;
-  font-family: inherit;
-  font-feature-settings: inherit;
-  font-variation-settings: inherit;
-  font-size: 100%;
-  line-height: inherit;
-  color: #000;
-  border: 0px;
-  background-color: transparent;
-  margin-right: 1rem;
-  cursor: pointer;
-}
-header .button-signup{
-  font-family: inherit;
-  font-feature-settings: inherit;
-  font-variation-settings: inherit;
-  font-size: 100%;
-  line-height: inherit;
-  color: inherit;
-  border: 1.5px solid;
-  border-color: #ffc60a;
-  border-radius: 9999px;
-  background-color: transparent;
-  padding-top: 0.5rem;
-  padding-bottom: 0.5rem;
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 .bg-white{
   background-color: #fff;
 }
 .flex{
   display: flex;
+}
+
+main {
+  margin-top: 6rem;
+}
+@media only screen and (max-width: 768px) {
+  main {
+    margin-top: 10rem;
+  }
 }
 
 /* overview */
@@ -171,7 +179,7 @@ header .button-signup{
   margin-left: auto;
   margin-right: auto;
   overflow: hidden;
-  justify-content: space-between;
+  justify-content: baseline;
 }
 .product .isi a{
   color: #000;
@@ -593,23 +601,23 @@ textarea {
   box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
   text-align: center;
 }
-.saudi-arabia{
-  background-image: url("../assets/countries/saudi-arabia.jpg");
+.jakarta{
+  background-image: url("../assets/city/jakarta.jpg");
 }
-.hongkong{
-  background-image: url("../assets/countries/hongkong.jpg");
+.bandung{
+  background-image: url("../assets/city/bandung.jpeg");
 }
-.indonesia{
-  background-image: url("../assets/countries/indonesia.jpg");
+.bali{
+  background-image: url("../assets/city/bali.jpg");
 }
-.malaysia{
-  background-image: url("../assets/countries/malaysia.jpg");
+.yogyakarta{
+  background-image: url("../assets/city/yogyakarta.jpeg");
 }
-.singapore{
-  background-image: url("../assets/countries/singapore.jpg");
+.semarang{
+  background-image: url("../assets/city/semarang.webp");
 }
-.philippines{
-  background-image: url("../assets/countries/philippines.jpg");
+.surabaya{
+  background-image: url("../assets/city/surabaya.jpg");
 }
 
 
