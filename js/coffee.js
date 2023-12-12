@@ -1,4 +1,4 @@
-fetch('http://localhost:3000/products/Coffee')
+fetch('https://aggressive-scarf-deer.cyclic.app/products/Coffee')
   .then((response) => response.json())
   .then((response) => {
     // Memastikan bahwa respons berisi array produk

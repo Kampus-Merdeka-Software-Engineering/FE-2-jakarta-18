@@ -35,7 +35,7 @@ document.getElementById('myForm').addEventListener('submit', function (event) {
     };
 
     // Make the fetch request
-    fetch('http://localhost:3000/contacts', {
+    fetch('https://aggressive-scarf-deer.cyclic.app/contacts', {
         headers: {
             'Content-Type': 'application/json'
         },
