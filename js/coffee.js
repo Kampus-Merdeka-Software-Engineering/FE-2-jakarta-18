@@ -42,15 +42,10 @@ fetch('https://aggressive-scarf-deer.cyclic.app/products/Coffee')
             const ingredientsList = document.createElement('ul');
             
             ingredientsArray.forEach((ingredientLine) => {
-            // Split each line into ingredient name and quantity
-            const [ingredientName, ingredientQuantity] = ingredientLine
-                .trim() // Trim leading and trailing spaces
-                .replace(/^-/, '') // Remove leading hyphen
-                .split(':'); // Split into name and quantity using colon
                 
             // Create a list item for each ingredient
             const ingredientItem = document.createElement('li');
-            ingredientItem.textContent = `${ingredientName.trim()}: ${ingredientQuantity.trim()}`;
+            ingredientItem.textContent = `${ingredientLine.replace('-', '').trim()}`;
             
             // Append the list item to the ingredients list
             ingredientsList.appendChild(ingredientItem);

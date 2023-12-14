@@ -4,6 +4,8 @@ fetch('https://aggressive-scarf-deer.cyclic.app/products/Burger')
     // Memastikan bahwa respons berisi array produk
     const products = Array.isArray(response.data) ? response.data : [];
 
+    console.log(products)
+
     // Get the product container element
     const productContainer = document.querySelector('.isi');
 
@@ -42,15 +44,10 @@ fetch('https://aggressive-scarf-deer.cyclic.app/products/Burger')
             const ingredientsList = document.createElement('ul');
             
             ingredientsArray.forEach((ingredientLine) => {
-            // Split each line into ingredient name and quantity
-            const [ingredientName, ingredientQuantity] = ingredientLine
-                .trim() // Trim leading and trailing spaces
-                .replace(/^-/, '') // Remove leading hyphen
-                .split(':'); // Split into name and quantity using colon
                 
             // Create a list item for each ingredient
             const ingredientItem = document.createElement('li');
-            ingredientItem.textContent = `${ingredientName.trim()}: ${ingredientQuantity.trim()}`;
+            ingredientItem.textContent = `${ingredientLine.replace('-', '').trim()}`;
             
             // Append the list item to the ingredients list
             ingredientsList.appendChild(ingredientItem);
@@ -75,5 +72,5 @@ fetch('https://aggressive-scarf-deer.cyclic.app/products/Burger')
     });
   })
   .catch((error) => {
-    console.error('Error fetching data:', error);
+    console.error(error);
   });
